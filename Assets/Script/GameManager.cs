@@ -6,9 +6,9 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
-
     public float clearTime;
     //private float clearTime; - encapsulation
+    public int point;
 
 
     private void Awake()
@@ -22,15 +22,28 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        
+        GetSaveData();
     }
 
-    // Update is called once per frame
-    void Update()
+    void GetSaveData()
     {
-        
+        if (PlayerPrefs.HasKey("clearTime"))
+        {
+            clearTime = PlayerPrefs.GetFloat("clearTime");
+        }
+        if (PlayerPrefs.HasKey("Point"))
+        {
+            point = PlayerPrefs.GetInt("Point");
+        }
+    }
+
+
+    public void SetData()
+    {
+        PlayerPrefs.SetFloat("clearTime", clearTime);
+        PlayerPrefs.SetInt("Point", point);
     }
 }
