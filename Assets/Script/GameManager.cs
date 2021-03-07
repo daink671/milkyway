@@ -6,8 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager Instance;
-    public float clearTime;
-    //private float clearTime; - encapsulation
+    public float clearTime;//it is same as 'private float clearTime; - encapsulation' 
     public int point;
 
 

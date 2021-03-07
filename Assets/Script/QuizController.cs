@@ -16,6 +16,7 @@ public class QuizController : MonoBehaviour
 
     int point = 0;
     string selectAnswer;
+    int selectAnswerInt;
 
     private float time = 0f;
     // Start is called before the first frame update
@@ -28,7 +29,7 @@ public class QuizController : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        timerText.text = time.ToString();
+        timerText.text = ((int)time).ToString() + " Sec";
     }
 
     
@@ -61,7 +62,7 @@ public class QuizController : MonoBehaviour
 
     void ShowQuestions()
     {
-        Init();
+        Init();//set all answers to black color for next questions
 
         var data = questionDatas.Space[currentQuestionNumber];
         questionText.text = data.Question;
@@ -89,6 +90,8 @@ public class QuizController : MonoBehaviour
             {
                 answer[i].GetComponent<Text>().color = Color.red;
                 selectAnswer = answer[i].GetComponent<Text>().text.Substring(3);
+                selectAnswerInt = i + 1;
+                Debug.Log(selectAnswer);
             }
             else
             {
@@ -102,18 +105,28 @@ public class QuizController : MonoBehaviour
 
     public void OnSubmitButtonClick()
     {
+        //if answer is string
         if (questionDatas.Space[currentQuestionNumber].Answer.ToUpper().Contains(selectAnswer.ToUpper()))
         {
+            Debug.Log(questionDatas.Space[currentQuestionNumber].Answer);
             point += 20;
             Debug.Log("correct");
         }
-        else
+        //if answer is int
+        else if (int.Parse(questionDatas.Space[currentQuestionNumber].Answer).Equals(selectAnswerInt))
         {
+            Debug.Log(questionDatas.Space[currentQuestionNumber].Answer);
+            point += 20;
+            Debug.Log("correct");
+        }
+        else 
+        { 
             Debug.Log("wrong");
         }
 
         currentQuestionNumber++;
 
+        //this is for just showing current point
         if (currentQuestionNumber >= questionDatas.Space.Length)
         {
             Debug.Log("your point " + point.ToString());
@@ -128,7 +141,7 @@ public class QuizController : MonoBehaviour
     }
 
 
-    private void Init()
+    private void Init()//make sure to show all possible answers as black color for next questions
     {
         selectAnswer = string.Empty;
 
