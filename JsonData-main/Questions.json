@@ -3,13 +3,13 @@
     {
       "No": 1,
       "Question": "The reason why we have 365 days because Earth orbits the sun once every 365 days."
-      "Answer": "No"
+      "Answer": "2"
       "Select": ["Yes","No"]
     },
     {
       "No": 2,
       "Question": "Earth's atmosphere is 78 percent nitrogen, __ percent oxygen and 1 percent other ingredients—the perfect balance to breathe and live."
-      "Answer": "21"
+      "Answer": "1"
       "Select" : ["21", "19", "15.6", "23", "26"]
     }
   ]
