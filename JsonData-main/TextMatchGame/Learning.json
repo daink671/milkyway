@@ -2,11 +2,11 @@
   "Space": [
     {
       "No": 1,
-      "Information": "something."
+      "Question": "something."
     },
     {
       "No": 2,
-      "Information": "important."
+      "Question": "important."
     }
   ]
 }
