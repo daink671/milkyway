@@ -2,11 +2,19 @@
   "Space": [
     {
       "No": 1,
-      "Question": "add more"
+      "Question": "Earth is the third planet from the sun in our solar system. Its name comes from the the old English and Germanic words meaning ‘the ground’."
     },
     {
       "No": 2,
-      "Question": "infomation"
+      "Question": "Our amazing planet has been around for quite some time. By researching our planet’s rocks, scientists have calculated the Earth to be around 4.5 billion years old!"
+    },
+    {
+      "No": 3,
+      "Question": "Have you ever wondered why we have different seasons? We’ll tell you –– it’s because the Earth is tilted 23.4 degrees on its ‘axis’, an imaginary line straight through the middle of the planet form the North Pole to the South Pole. This means that different parts of the globe are tilted towards the sun at different times of the year (or at different times during its orbit)."
+    },
+    {
+      "No": 4,
+      "Question": "Not only does Earth zoom through space, it also spins on its axis. The result? We have daytime and nighttime! As the planet rotates, the side facing the sun receives daylight and the the other is in darkness."
     }
   ]
 }
