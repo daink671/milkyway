@@ -67,7 +67,7 @@ public class Login : MonoBehaviour
                     PlayerInfo.title = info[1];
                  
               
-                   PlayerInfo.points = int.Parse(info[2].Split('<')[0]);
+                    PlayerInfo.points = int.Parse(info[2].Split('<')[0]);
                    
                     SceneManager.LoadScene(2);
                 }
