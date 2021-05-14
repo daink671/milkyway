@@ -1,0 +1,22 @@
+{
+  "Space": [
+    {
+      "No": 1,
+      "Question": "A year is Mars is almost twice as long as a year on Earth.",
+      "Answer": "1",
+      "Select": ["Yes","No"]
+    },
+    {
+      "No": 2,
+      "Question": "Mars atmosphere contain 96% of ___. ",
+      "Answer": "3",
+      "Select" : ["Oxygen", "Nitrogen", "Carbon Dioxide", "Argon", "Other"]
+    },
+    {
+      "No": 3,
+      "Question": "Mars has __% less gravity than Earth.",
+      "Answer": "4",
+      "Select": ["63", "71", "68.5", "62.5", "65.2"]
+    }
+  ]
+}
